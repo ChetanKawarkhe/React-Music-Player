@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
 import {songsData} from '../assets/assets'
+import { PlayerContext } from '../context/PlayerContext'
+
 
 const Player = () => {
+
+  const {seekBar, seekBg} = useContext(PlayerContext)
+
   return (
     <div className='h-[10%] bg-bblack flex  justify-between items-center text-white px-4'>
       <div className="hidden lg:flex items-center gap-4">
